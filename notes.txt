@@ -1,0 +1,129 @@
+Html:
+HyperText Markup Language
+It is the code that structures the webpage and its content.
+
+It consists of series of elements structured in a way how the developer wants teh weppage to look
+the elements are tags which are basic building blocks of the website 
+
+The main parts of our element are as follows:
+
+The opening tag: This consists of the name of the element (in this case, p), wrapped in opening and closing angle brackets. This states where the element begins or starts to take effect — in this case where the paragraph begins.
+The closing tag: This is the same as the opening tag, except that it includes a forward slash before the element name. This states where the element ends — in this case where the paragraph ends. Failing to add a closing tag is one of the standard beginner errors and can lead to strange results.
+The content: This is the content of the element, which in this case, is just text.
+The element: The opening tag, the closing tag, and the content together comprise the element.
+eg :
+<p  class ="text"  > happy </p>
+
+Attribute 
+attribute contain extra information taht we dont want to display in the content, this attribute is then used to target 
+that particular element and perform certain tasks, like giveing it style, etc
+
+Note: Simple attribute values that don't contain ASCII whitespace (or any of the characters " ' ` = < >) can remain unquoted, 
+but it is recommended that you quote all attribute values, as it makes the code more consistent and understandable.
+
+Nesting :
+You can put elements inside other elements too — this is called nesting.
+
+Void elements :
+Some elements have no content and are called void elements. Take the <img> element that we already have in our HTML page:
+<img src="images/firefox-icon.png" alt="My test image" />
+This contains two attributes, but there is no closing </img> tag and no inner content. 
+This is because an image element doesn't wrap content to affect it. 
+Its purpose is to embed an image in the HTML page in the place it appears.
+
+Anatomy of an HTML document:
+
+<!DOCTYPE html>:
+this is the first line of code which instructs the browaser about the version of the HTML you are working in :
+this insures the webpage is parsed in same way by all the browsers
+<html lang="en">:
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+***********************************************************
+
+more on <!DOCTYPE html > : 
+
+What Happens Without <!DOCTYPE html>
+Without <!DOCTYPE html>, your HTML code can still run, but it may face several significant drawbacks:
+
+Quirks Mode Activation: Browsers may switch to quirks mode, leading to outdated behaviors that cause inconsistent rendering compared to standards mode.
+Rendering Issues: CSS properties like box-sizing, margins, and widths may be interpreted differently, causing layout problems and misaligned elements that are difficult to debug.
+Cross-Browser Inconsistencies: Different browsers might render the page differently in quirks mode, making it hard to achieve cross-browser consistency.
+CSS and JavaScript Problems: Modern features like Flexbox, Grid, and certain JavaScript methods may not work correctly, causing compatibility issues.
+Unpredictable Behavior: Without <!DOCTYPE>, rendering becomes unpredictable, making debugging more challenging and leading to unpredictable page behavior when adding new features.
+
+octype Declaration for Different Version of HTML and XHTML
+
+HTML 5	<!DOCTYPE html>
+HTML 4.01 Strict	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+HTML 4.01 Transitional	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+HTML 4.01 Frameset	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+XHTML 1.0 Strict	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+XHTML 1.0 Transitional	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+XHTML 1.0 Frameset	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+XHTML 1.1	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+***********************************************************
+
+more on w3 organizaion :
+
+this is the organization that sets the standards for the world wide web and regulates them 
+
+
+***********************************************************
+
+the lang attribute in the html tag is very intresting!!:
+
+it is used to state the language of the constent and for which country audience the website is ment to be :
+exampe :
+lang="en" -> just the lang is english 
+lang="en-US" -> english language for us people
+lang="hi-in" -> hindi language for indian people
+
+
+***********************************************************
+
+Head element :
+
+the head element consisto of teh machine readeable information(metadata) out the document, like the styles, scripts, style sheets etc. 
+there can be only one head element in HTML document. 
+
+attributes in head element :
+
+
+***********************************************************
+
+Global attributes :
+global attributes are the attributes which are common to all the HTML elemants, 
+they may be used on all the elemants though they might n=have no effect on soime elements 
+
+some of the global attributes are :
+accesskey, autocapatalize, autocorrect, autofocus, class, dir, hidden, id, etc
+
+***********************************************************
+
+Anything in HTML between <!-- and --> is an HTML comment.
+
+***********************************************************
+
+important notes :
+
+1. href satnds for hyper reference!!
+2. You might get unexpected results if you omit the https:// or http:// part, called the protocol, at the beginning of the web address. 
+After making a link, click it to make sure it is sending you where you wanted it to.
+
+
+

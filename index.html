@@ -1,0 +1,290 @@
+<!-- Note: Tags in HTML are not case-sensitive. This means they can be written in uppercase or lowercase. For example, a
+<title> tag could be written as <title>, <TITLE>, <Title>, <TiTlE>, etc., and it will work. However, it is best practice
+to write all tags in lowercase for consistency and readability. -->
+
+<!-- Note: In HTML, there is no requirement to add a / at the end of a void element's tag, for example: <img
+src="images/cat.jpg" alt="cat" />. However, it is also a valid syntax, and you may do this when you want your HTML
+to be valid XML. -->
+
+<!-- note: To use quote marks inside other quote marks of the same type (single quote or double quote), use character references. -->
+
+<!-- note : Note: Accessing the innerHTML of elements from JavaScript will keep all the whitespace intact. This may return
+unexpected results if the whitespace is trimmed by the browser. -->
+
+<!-- Note: If your site uses a Content Security Policy (CSP) to enhance its security, the policy applies to the favicon. If
+you encounter problems with the favicon not loading, verify that the Content-Security-Policy header's img-src directive
+is not preventing access to it. -->
+
+<!-- Note: The <script> element may look like a void element, but it's not, and so needs a closing tag. 
+Instead of pointing to an external script file, you can also choose to put your script inside the <script> element. -->
+
+<!-- Note: In order to improve speed, it's a good idea to set the iframe's src attribute with JavaScript after the main
+    content is done with loading. This makes your page usable sooner and decreases your official page load time (an
+    important SEO metric.) -->
+
+<!-- /this tag tells  that the type of document -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hrishikesh S G">
+
+    <!-- Metadata is data that describes data, and HTML has an "official" way of adding metadata to a document — the
+    <meta> element. Of course, the other stuff we are talking about in this article could also be thought of as metadata
+    too. There are a lot of different types of
+    <meta> elements that can be included in your page's
+    <head>, but we won't try to explain them all at this stage, as it would just get too confusing. Instead, we'll explain a
+    few things that you might commonly see, just to give you an idea. -->
+
+    <title>Document</title>
+    <!-- there are different gavicons for different devices and usecases refer the mdn docs before applying on any production site-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <!-- code for access key for a element  -->
+    <!-- the access key is acivated when clicked : control + option + "s" -->
+    <h2>example of access key it is acivated when clicked : control + option + "s"</h2>
+    <p>If you need to relax, press the <b>S</b>tress reliever!</p>
+    <button accesskey="s" id="button">Stress reliever</button>
+    <hr>
+    <!-- links with example  -->
+    <h2>links with example</h2>
+    <br>
+    <a href="help.html#landing-help" title="link to navigate to another page">
+        help
+    </a>
+    <br>
+    <a href="mailto:ghrishikesh77@gmail.com" title="link to mail hrishi">mail</a>
+    <br>
+    <!-- email to anyone with the help of anchor tag : -->
+    <!-- use Percent-encoding for special characters and spaces inside the "mailto:" thing  -->
+    <a
+        href="mailto:hrishikesh77@gmail.com?cc=help@gmail.com&bcc=help2@gmail.com&subject=subject_of_the_email&body=the_body_of_email">
+        enail with subject and body </a>
+
+    <!-- advance text formatting  -->
+
+    <!-- description list  dl: description list, dt: description term, dd: description definition-->
+    <!-- one description term can have many description definitions -->
+    <p>this is the example of description list</p>
+    <br>
+
+    <hr>
+    <!-- There are basically three types of lists in html -->
+
+    <h2>There are basically three types of lists in html</h2>
+
+    <h3>descriptive list</h3>
+
+    <dl>
+        <dt>Title 1</dt>
+        <dd>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum incidunt omnis odio necessitatibus, odit
+            placeat deleniti esse eum inventore saepe quos debitis quaerat sit nesciunt fuga, alias quis deserunt! A
+            exercitationem asperiores harum, consequatur assumenda rerum aliquam quam excepturi atque voluptas
+            repellat
+            incidunt. Fuga exercitationem minus esse, nulla quae iste!
+        </dd>
+        <dt>
+            Title 2
+        </dt>
+        <dd>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus aut quae vero nobis asperiores
+            aliquam
+            maiores dolorem inventore ratione, corporis in quis fugit quam vitae reprehenderit cupiditate
+            doloremque.
+            Explicabo, officia delectus accusantium iste magnam, nobis doloribus modi eligendi fuga libero mollitia
+            dolores id adipisci quia nulla aperiam ducimus atque veritatis.
+        </dd>
+    </dl>
+    <h3>ordered list</h3>
+    <ol>
+        <li>Drive to the end of the road</li>
+        <li>Turn right</li>
+        <li>Go straight across the first two roundabouts</li>
+        <li>Turn left at the third roundabout</li>
+        <li>The school is on your right, 300 meters up the road</li>
+    </ol>
+    <h3>unordered list</h3>
+    <ul>
+        <li>milk</li>
+        <li>eggs</li>
+        <li>bread</li>
+        <li>hummus</li>
+    </ul>
+    <hr>
+    <!-- Emphasis and importance, semantics -->
+    <h2>Emphasis example</h2>
+    <p>On <strong>Sunday January 9th 2010</strong>, a gang of <em>goths</em> were spotted stealing
+        <strong><em>several</em>
+            garden gnomes</strong> from a shopping center in downtown <strong>Milwaukee</strong>. They were all wearing
+        <em>green jumpsuits</em> and <em>silly hats</em>, and seemed to be having a whale of a time. If anyone has
+        <strong>any</strong> information about this incident, <mark>please contact</mark> the police
+        <strong>now</strong>.
+    </p>
+
+    <!-- HTML5 redefined <b>, <i>, and <u> with new, somewhat confusing, semantic roles. -->
+
+    <!-- Here's the best rule you can remember: It's only appropriate to use <b>, <i>, or <u> to convey a meaning
+    traditionally conveyed with bold, italics, or underline when there isn't a more suitable
+    element; and there usually is. Consider whether <strong>, <em>, <mark>, or <span> might be more
+    appropriate. -->
+
+    <!-- note:
+    Note: People strongly associate underlining with hyperlinks. Therefore, on the web, it's best to only underline links.
+    Use the <u> element when it's semantically appropriate, but consider using CSS to change the default underline to
+    something more appropriate on the web. The example below illustrates how it can be done. -->
+    <hr>
+    <!-- Character reference: -->
+    <h2>character reference</h2>
+    <p> In HTML, the characters &lt; &gt; &lt; &quot; &apos; &amp; are special characters. They are parts of the HTML
+        syntax itself.</p>
+    <p>Each character reference starts with an ampersand (&amp;), and ends with a semicolon (;).</p>
+    <hr>
+
+    <!-- we can write ay language inside the html document -->
+    <p>Japanese example: <span lang="Japanese">ご飯が熱い。</span></p>
+    <hr>
+    <!-- advance text formatting -->
+    <h2>Advance text formatting</h2>
+
+    <!-- 1. descriptive list  -->
+
+    <h3>descriptive list</h3>
+
+    <dl>
+        <dt>Title 1</dt>
+        <dd>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum incidunt omnis odio necessitatibus, odit
+            placeat deleniti esse eum inventore saepe quos debitis quaerat sit nesciunt fuga, alias quis deserunt! A
+            exercitationem asperiores harum, consequatur assumenda rerum aliquam quam excepturi atque voluptas
+            repellat
+            incidunt. Fuga exercitationem minus esse, nulla quae iste!
+        </dd>
+        <dt>
+            Title 2
+        </dt>
+        <dd>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus aut quae vero nobis asperiores
+            aliquam
+            maiores dolorem inventore ratione, corporis in quis fugit quam vitae reprehenderit cupiditate
+            doloremque.
+            Explicabo, officia delectus accusantium iste magnam, nobis doloribus modi eligendi fuga libero mollitia
+            dolores id adipisci quia nulla aperiam ducimus atque veritatis.
+        </dd>
+    </dl>
+
+    <!-- Quotations -->
+
+    <!-- block quotes  -->
+    <!-- block quotes is the section where a user wants to add a quote which is quoted from some where else  -->
+    <h3>thers an example of blockquote</h3>
+    <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+        <p>
+            The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+            <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
+            an extended quotation.
+        </p>
+    </blockquote>
+
+    <h3>thers an example of inline quote</h3>
+    <p>
+        The quote element — <code>&lt;q&gt;</code> — is
+        <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+            intended for short quotations that don't require paragraph breaks.
+        </q>
+    </p>
+
+    <!-- abbrevations -->
+    <h3>Abbrevations</h3>
+    <p>
+        I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with
+        the chainsaw.
+    </p>
+
+    <h3>Address</h3>
+    <address>Chris Mills, Manchester, The Grim North, UK</address>
+    <address>
+        <p>
+            Chris Mills<br />
+            Manchester<br />
+            The Grim North<br />
+            UK
+        </p>
+
+        <ul>
+            <li>Tel: 01234 567 890</li>
+            <li>Email: me@grim-north.co.uk</li>
+        </ul>
+    </address>
+    <address>
+        Page written by <a href="../authors/chris-mills/">Chris Mills</a>.
+    </address>
+
+    <h3>Superscript and subscript</h3>
+    <p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
+    <p>
+        Caffeine's chemical formula is
+        C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.
+    </p>
+    <p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
+
+    <h3>Representing computer code</h3>
+    <!-- <code> For marking up generic pieces of computer code. -->
+    <!-- <pre>: For retaining whitespace (generally code blocks) -->
+    <pre><code>const para = document.querryselector('p');
+        para.onClick = function(){
+            alert("stop poking me!!");
+        }</code>
+    </pre>
+    <!-- <var>: For specifically marking up variable names. -->
+    <p>
+        In the above JavaScript example, <var>para</var> represents a paragraph
+        element.
+    </p>
+    <p>to activate teh access key enter : <kbd>control</kbd> + <kbd>option</kbd> + <kbd>s</kbd></p>
+
+    <!-- <samp>: For marking up the output of a computer program. -->
+    <pre>$ <kbd>ping mozilla.org</kbd>
+    <samp>PING mozilla.org (63.245.215.20): 56 data bytes
+    64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+
+    <h3>date and time</h3>
+    <!-- Standard simple date -->
+    <time datetime="2016-01-20">20 January 2016</time><br>
+    <!-- Just year and month -->
+    <time datetime="2016-01">January 2016</time><br>
+    <!-- Just month and day -->
+    <time datetime="01-20">20 January</time><br>
+    <!-- Just time, hours and minutes -->
+    <time datetime="19:30">19:30</time><br>
+    <!-- You can do seconds and milliseconds too! -->
+    <time datetime="19:30:01.856">19:30:01.856</time><br>
+    <!-- Date and time -->
+    <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time><br>
+    <!-- Date and time with timezone offset -->
+    <time datetime="2016-01-20T19:30+01:00">
+        7.30pm, 20 January 2016 is 8.30pm in France
+    </time><br>
+    <!-- Calling out a specific week number -->
+    <time datetime="2016-W04">The fourth week of 2016</time><br>
+    <figure>
+        <img src="https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg" alt="The head and torso of a dinosaur skeleton;
+            it has a large head with long sharp teeth" width="400" />
+
+        <figcaption>
+            A T-Rex on display in the Manchester University Museum.
+        </figcaption>
+    </figure>
+
+
+
+</body>
+<!-- another way to put the js file : -->
+<!-- <script src="/index.js"></script> -->
+
+</html>
