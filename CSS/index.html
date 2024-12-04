@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- linking the external stylesheet -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- internsal style-sheet -->
+    <style>
+        /* p {
+            color: blue;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- example of inline style note: avoid using css in this way!! -->
+    <h1 style="color: brown">
+        This is the heading of page
+    </h1>
+    <h2>Subheading 1</h2>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi eum ea ipsa veritatis numquam qui vel hic,
+        necessitatibus fugiat quas quasi, sed soluta vero dignissimos ipsam excepturi distinctio recusandae alias
+        possimus odit delectus. Commodi eveniet incidunt corporis perspiciatis doloribus saepe ducimus reiciendis!
+        Consequuntur aliquid expedita, ullam esse voluptate optio atque possimus iure aspernatur officia nostrum maiores
+        quod, ex sit magnam eos quo reprehenderit dolorem, voluptates error tempore minima! Eveniet vitae itaque minima
+        asperiores nisi nam, vero, nemo facere odio ducimus est error voluptatum sapiente, aliquam incidunt possimus
+        ipsum veritatis corporis ab perferendis debitis. Consequuntur ab exercitationem quia consectetur. Nostrum,
+        delectus.
+    </p>
+    <h2>Sub Heaing 2</h2>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis perspiciatis aperiam exercitationem nemo
+        tenetur placeat. Odio reiciendis quis fugit nesciunt quisquam quia, amet reprehenderit mollitia modi ut alias
+        ipsa hic provident, aliquid quas, quaerat id explicabo excepturi soluta laboriosam repellendus? Fuga, optio!
+        Accusamus molestiae illum, aperiam mollitia dolorum architecto provident doloremque! Earum officiis temporibus
+        officia quod consequatur. Quas sit dignissimos totam, sapiente omnis libero iure. Cum, voluptatem eligendi iusto
+        animi placeat aut mollitia et veniam, officiis accusamus corporis ipsam modi necessitatibus pariatur saepe
+        cumque impedit in quae iste? Nisi sequi excepturi voluptatem libero voluptatibus earum exercitationem ipsa culpa
+        incidunt vero!
+    </p>
+    <h2>Sub Heaing 2</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias expedita placeat dolorum nulla totam iste
+        beatae ab itaque vel praesentium at blanditiis non pariatur quas repellat iure, voluptas incidunt ex quaerat
+        dignissimos unde laborum eveniet quo natus? Assumenda possimus earum ducimus corrupti expedita? Aspernatur,
+        excepturi laboriosam maiores temporibus quod repellendus sed hic necessitatibus animi impedit ex commodi numquam
+        fugit repudiandae, a atque reiciendis aperiam consectetur architecto tempora accusamus, voluptatibus sequi illum
+        quaerat? Consectetur alias vel magnam dolor culpa tempora veritatis, fugit voluptatibus repellendus quasi
+        aliquam nihil animi et maxime sequi sunt at ea quia illum quidem blanditiis rem architecto nulla!
+    </p>
+    <h2>Sub Heaing 2</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita aperiam atque aliquam debitis aut ea ipsum
+        itaque porro quos molestiae! Perspiciatis labore veritatis in corporis quae tempora tempore ab cum, autem omnis
+        architecto fuga magnam alias saepe ut eos odit sit dolorum ex maiores ducimus temporibus laborum! Rem eveniet
+        atque et a sit doloribus non voluptate deserunt porro ea accusamus voluptas est, natus rerum distinctio, iste,
+        dolore recusandae sed officia modi alias facilis? Maiores vitae est omnis ducimus. Sunt laborum totam,
+        temporibus sit iusto hic recusandae maxime. Optio, dolorem officia. Animi pariatur, inventore molestiae
+        repudiandae soluta porro asperiores autem officia!
+    </p>
+    <div class="box">
+    </div>
+
+
+    <p>Without perspective:</p>
+    <div class="no-perspective-box">
+        <div class="face front">A</div>
+        <div class="face top">B</div>
+        <div class="face left">C</div>
+    </div>
+
+    <p>With perspective (9cm):</p>
+    <div class="perspective-box-far">
+        <div class="face front">A</div>
+        <div class="face top">B</div>
+        <div class="face left">C</div>
+    </div>
+
+    <p>With perspective (4cm):</p>
+    <div class="perspective-box-closer">
+        <div class="face front">A</div>
+        <div class="face top">B</div>
+        <div class="face left">C</div>
+    </div>
+
+    <!-- psuedo class and psuedo element  -->
+    <article>
+        <p>
+            Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+            daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+        </p>
+
+        <p>
+            Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+            tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+            Dandelion cucumber earthnut pea peanut soko zucchini.
+        </p>
+    </article>
+
+
+    <!-- example of ::after and ;;before -->
+    <p class="box1">Content in the box in my HTML page.</p>
+
+    <div class="importance">
+
+        <!-- in css There are three factors to consider, listed here in increasing order of importance. Later ones overrule earlier ones:
+    Source order
+    Specificity
+    Importance  -->
+
+        <!-- !important
+    There is a special piece of CSS that you can use to overrule all of the above calculations, 
+    even inline styles - the !important flag. However, you should be very careful while using it. 
+    This flag is used to make an individual property and value pair the most specific rule, 
+    thereby overriding the normal rules of the cascade, including normal inline styles. -->
+
+        <p class="better">This is a paragraph.</p>
+        <p class="better" id="winning">One selector to rule them all!</p>
+    </div>
+
+    <h1 class="layer">Is this heading underlined?</h1>
+
+
+
+</body>
+
+</html>

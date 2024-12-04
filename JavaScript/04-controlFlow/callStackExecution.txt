@@ -1,0 +1,53 @@
+JavaScript execution context :  - This determines how a javascript file is being executed 
+                                - JavaScript executes the program in two phases
+                                 
+1. Global execution context   - it is refered to variable "this"
+                              - the global execution context is different for browser and the environment like(nodeJs, Buno)
+   - there are mmultiple execution context :
+   *  Global execution context 
+   *  Functional execution context
+   *  Eval execution context                          
+
+2.  the code is being executed in two phases:
+    i. memory creation phases
+    ii. Execution phase
+
+
+everything in js happens in execution context
+***************************************** example *****************************************
+
+    execution for the below code given :
+
+    let a = 10;
+    let b = 7;
+
+    function add(num1, num2){
+        return num1 + num2;
+    }
+
+    add(a, b);
+
+********************************************************************************************
+
+phases of code execution :
+
+1. Global environment is created (also called global execution) -> "this"
+2. Memory creation phase-> here all teh variavles are stored with the undefined assigned to every variable, 
+    for functions the definition is assigned during this phase.
+3. Execution step -> here eachand every line is now executed in the code 
+4. at the end, wwhen al the operations are executesd the execution environment is deleted and the call stack is biing made  empty
+
+note :
+    when ever we encounter a function while running the JS engine creates a new execution context for that particular function call and the 
+    function is executed for that set of parameters until it returns seperately in different 
+
+
+call stack :
+this stack keeps the track of all the execution blocks of the code, at teh very begning the global execution context is pushed 
+in the stack and as we move further with the code the stack is pushed with the execution tasks created due to functions, then each 
+task is comleted and the the execution context is deleted and removed out of the cal stack.
+
+call sack follows the lifo method to perform its operation.
+
+
+  
