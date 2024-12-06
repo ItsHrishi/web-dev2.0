@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="heading">Learning Javascript</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const heading = document.querySelector("#heading")
+    const button = document.querySelector("#stop")
+
+    function headingChange() {
+        heading.innerHTML = 'I have changed'
+        console.log("Heading change")
+    }
+
+    const headingChange = setTimeout(headingChange, 2000)
+
+    button.addEventListener('click', function () {
+        clearTimeout(headingChange);
+        console.log("stopped")
+    })
+
+
+</script>
+
+</html>

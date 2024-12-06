@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px
+        }
+    </style>
+</head>
+
+<body style="background-color: #414141; color:aliceblue">
+    <h1>Amazing Images</h1>
+    <div>
+        <ul class="images">
+            <li><img id="cat" src="./images/cat.jpg" alt="CatImage">
+            </li>
+            <li><img id="cone" src="./images/cone.jpg" alt="happy cone"></li>
+            <li><img id="coffee" src="./images/coffee.jpg" alt="coffee"></li>
+            <!--  we can write this type of event listining but they are not scalable, there can be problems when we scale the application 
+              react is different than HTML we can do this in pure js -->
+            <!-- onclick='alert(" hello")' -->
+            <li><img id="dog" src="./images/dog.jpg" alt="dogSurfing"></li>
+        </ul>
+    </div>
+    <a id="google" style="color: aliceblue;" href="https://www.google.com">Google</a>
+</body>
+<script>
+    //  this is the document where the basic operation of event listining is mentioned :
+    // the event listining is the function that tracks all the events that are hapening on the webpage,
+    //  example : click, mouseover, drag, drop etc
+
+    // one way to add event listner:
+    // thsi is not the best way to accomplish the task as we get less features avaiable here
+    // document.getElementById("coffee").onclick = function () {
+    //     alert("coffee")
+    // }
+
+    // another way to do is :
+    // here the paramaters are : 1 event, 2 function on what should happen on the event triggered,
+    // 3 true/ false, it is the event propogation, default it is false only
+
+    // document.getElementById("coffee").addEventListener('click', function () {
+    //     alert("hello")
+    // }, false)
+
+    // before used to add event :
+    // attaceEvent() : this was used during the Inernet Explorer time
+    // jQuery "on" :   there was jQuery framework where "on", event ws used to use events
+
+    //  the event object inside the addEventListner function gives information about the event :
+    // like timeStamp, clientX, clientY, etc
+    // document.querySelector('body').addEventListener('click', function (e) {
+    //     console.log(e);
+    // })
+
+    //  the best way to addevent listner:
+
+    // document.querySelector("#cat").addEventListener('click', function () {
+    //     alert("clicked on cat")
+    // }, false)
+
+    //  event propogation : here as the default propogation is flase the propogation is called "bubbling up" from bottom tag to up
+
+    // document.getElementById("cone").addEventListener('click', function () {
+    //     console.log("clicked on cone")
+    // }, false)
+
+    // document.querySelector(".images").addEventListener('click', function () {
+    //     console.log("Clicked on all images")
+    // }, false)
+
+    //  event propogation : here as the default propogation is true the propogation is called "capturing mode" from top to bottom
+
+    // document.getElementById("cone").addEventListener('click', function (e) {
+    //     console.log("clicked on cone")
+    //     e.stopPropagation();
+    // }, true)
+
+    // document.querySelector(".images").addEventListener('click', function () {
+    //     console.log("Clicked on all images")
+    // }, true)
+
+    // stop propogation
+
+    // document.getElementById("cone").addEventListener('click', function (e) {
+    //     console.log("clicked on cone")
+    //     e.stopPropagation();
+    // }, false)
+
+    // // now this function wont run when clicked on cone!!
+    // document.querySelector(".images").addEventListener('click', function () {
+    //     console.log("Clicked on all images")
+    // }, false)
+
+    // preventDefault event :
+    document.getElementById("google").addEventListener('click', function (e) {
+        e.preventDefault();
+    })
+
+    //  add the event propogation on multiple tags at once :
+
+    document.querySelector('.images').addEventListener('click', function (e) {
+        console.log(e.target.tagName);
+        if (e.target.tagName == 'IMG') {
+            //  one way to do it
+            e.target.parentNode.remove()
+            // another way to do it :
+            // let removeTraget = e.target.parentNode;
+            // removeTraget.parentNode.removeChild(removeTraget);
+
+        }
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
