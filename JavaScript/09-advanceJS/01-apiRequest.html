@@ -1,0 +1,98 @@
+<!-- this document conmstains the basic understanding of api request and how the api request was 
+ working before the fetch feature was introduced in javascript -->
+<!-- Here e are writing the code for calling the api using xml request -->
+<!-- XMLRequest is ajax progeam : asunchronous javascript and XML -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #212121; color: aliceblue;">
+    <h1>
+        API Request using xml request
+    </h1>
+    <!-- <p> -->
+    <!-- The XMLHttpRequest.readyState property returns the state an XMLHttpRequest client is in. An XHR client exists in
+        one of
+        the following states:
+
+        Value State Description
+        0 UNSENT Client has been created. open() not called yet.
+        1 OPENED open() has been called.
+        2 HEADERS_RECEIVED send() has been called, and headers and status are available.
+        3 LOADING Downloading; responseText holds partial data.
+        4 DONE The operation is complete. -->
+
+    <!-- </p> -->
+    <button class="clickHere">Click Here</button>
+
+</body>
+<script>
+
+    const button = document.querySelector(".clickHere");
+    const body = document.querySelector("body")
+    const card = document.createElement('div');
+    card.setAttribute("id", "card");
+    card.setAttribute("style", "margin : 30px; border-radius: 30px; padding: 20px; background-color: aliceblue; width: 250px; ")
+    body.appendChild(card);
+
+    const img = document.createElement('img');
+    img.setAttribute("style", "margin : auto; border-radius: 50px; width: 100%; height : 250px; object-fit: cover; background-color: #121212;")
+    card.appendChild(img)
+
+    const name = document.createElement('h3');
+    name.setAttribute("style", "margin : 10px; color: #121212;")
+    card.appendChild(name)
+
+    let data
+
+    button.addEventListener('click', function () {
+
+        getData();
+
+    })
+
+    function getData() {
+        const apiRequest = "https://api.github.com/users/itshrishi"
+        const xhr = new XMLHttpRequest()
+        // this just sets teh property
+        xhr.open('GET', apiRequest);
+
+        console.log("here")
+
+        // here the actual call is made
+        xhr.send()
+
+        xhr.onreadystatechange = function () {
+            console.log(xhr.readyState)
+            if (xhr.readyState === 4) {
+                console.log(this.responseText)
+                console.log(JSON.parse(this.responseText))
+                data = JSON.parse(this.responseText)
+
+                // Update UI with fetched data
+                img.setAttribute('src', data.avatar_url);
+                img.style.backgroundColor = "transparent"
+                name.textContent = data.name || "No Name Available";
+            }
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
