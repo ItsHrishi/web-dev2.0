@@ -5,15 +5,16 @@
 const coding = ["java", "cpp", "pythin", "ruby"];
 
 const forEachReturnValue = coding.forEach((item) => {
+  console.log(item);
   return item;
 });
 
 // the op is undefined!!
-// console.log(forEachReturnValue);
+console.log(forEachReturnValue);
 
 // filter function on array:
 
-// finter function returns the value, when the condition is satisfied:
+// filter function returns the value, when the condition is satisfied:
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // no thing will happen as we are no doing anuthing with the values

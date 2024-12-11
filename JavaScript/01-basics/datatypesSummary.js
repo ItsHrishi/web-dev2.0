@@ -4,7 +4,7 @@ majorly there are two primary data types :
 2. non-primitive data type or reference type 
 */
 
-// primitive data types : String, number, boolean, null, undefined, symbol, Bigint
+// primitive data types : String, number, boolean, null, undefined, symbol, BigInt
 
 //Reference type  (non primitive) : Arry, Object, functions
 
@@ -18,16 +18,20 @@ const anotherId = Symbol("123");
 
 // console.log(typeof(id));
 
+const newSymb = Symbol("hello");
+
 array = ["apple", "mango", "watermealon"];
 const myObj = {
   name: "hrishi",
   age: 3,
+  [newSymb]: "6171",
 };
 
 const exampleFunc = () => {
   console.log("hello world");
 };
 
+console.log("hello", myObj);
 console.log(typeof array);
 console.log(typeof myObj);
 exampleFunc();

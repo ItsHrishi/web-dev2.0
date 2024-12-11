@@ -34,6 +34,7 @@ flatexample = arr1.flat(Infinity);
 // console.log(flatexample);
 
 console.log(Array.isArray("hrishi"));
+console.log(Array.isArray(arr1));
 console.log(Array.from("hrishi"));
 console.log(Array.from({ name: "hrishi" })); // this is a trickey function just returne the array in specific scnerios or
 // else returns empty array []
