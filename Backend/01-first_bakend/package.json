@@ -1,0 +1,19 @@
+{
+  "name": "01-first_bakend",
+  "version": "1.0.0",
+  "description": "first backed appliction which is deployed",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "hrishi",
+    "node"
+  ],
+  "author": "Hrishikesh S G",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}

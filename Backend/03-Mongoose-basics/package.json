@@ -1,0 +1,19 @@
+{
+  "name": "03-mongoose-basics",
+  "version": "1.0.0",
+  "description": "this file contsins the basic understanding of mongoose db",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start":"node index.js"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Hrishikesh S G",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.9.0"
+  }
+}

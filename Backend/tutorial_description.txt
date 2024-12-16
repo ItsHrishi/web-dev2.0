@@ -1,0 +1,8 @@
+lecture 1 :
+basics about backend and its working!!
+
+lecture 2: 
+how to deploy and create a basic aplication
+
+lecture 3:
+connecting the frontend and backends
